@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.2'
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'nexus'
+
+dependencies {
+    repositories {
+        mavenCentral()
+    }
+
+    compile gradleApi()
+    compile localGroovy()
+    compile 'com.android.tools.build:gradle:0.11.+'
+    compile "org.aspectj:aspectjtools:1.7.1"
+    compile "org.aspectj:aspectjrt:1.7.1"
+}
