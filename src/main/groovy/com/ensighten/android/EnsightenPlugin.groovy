@@ -86,7 +86,6 @@ class AspectjCompile extends DefaultTask {
         }
 
         def String[] args = [
-                "-nowarn",
                 "-Xlint:ignore",
                 "-encoding", "UTF-8",
                 "-" + project.android.compileOptions.sourceCompatibility,
